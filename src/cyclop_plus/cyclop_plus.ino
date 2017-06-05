@@ -186,6 +186,8 @@ void setup()
   if (!readEeprom()) {
     currentChannel = CHANNEL_MIN;
     resetOptions();
+  } else {
+    updateSoftPositions();
   }
 
   // Start receiver
